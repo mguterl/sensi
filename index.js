@@ -5,7 +5,7 @@ request = Promise.promisify(request.defaults({ jar: true }));
 var Sensi = function(options) {
   this.username = options.username;
   this.password = options.password;
-  this.baseUrl = 'https://bus-serv.sensicomfort.com';
+  this.baseUrl = options.baseUrl || 'https://bus-serv.sensicomfort.com';
   this.defaultHeaders = {
     'X-Requested-With': 'XMLHttpRequest', // needed to get cookies instead of token
     'Accept': 'application/json; version=1, */*; q=0.01'

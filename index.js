@@ -104,7 +104,7 @@ Sensi.prototype.setHeat = function(options) {
       data: JSON.stringify({
         'H': 'thermostat-v1',
         'M': 'SetHeat',
-        'A': [options.icd, options.temperature, options.temperatureScale],
+        'A': [options.icd, options.temperature, options.scale],
         'I': 1
       })
     }
